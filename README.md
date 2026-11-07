@@ -55,10 +55,22 @@ DSH 版本检测与一键升级插件，**Linux 优先**，**零硬编码路径*
 
 ## 安装
 
+从 npm 安装（推荐）：
+
 ```bash
-dsh plugin --profile web add /path/to/dsh-upgrade-linux
+dsh plugin --profile web add dsh-upgrade-linux
 systemctl --user restart dsh-web.service   # 或你自己的重启方式
 ```
+
+从本地目录安装（开发调试）：
+
+```bash
+dsh plugin --profile web add /path/to/dsh-upgrade-linux
+systemctl --user restart dsh-web.service
+```
+
+> **平台要求**：本插件仅支持 Linux（依赖 `systemctl`、`/proc`、`npm root -g`）。
+> 包内已声明 `dsh.bundle.platforms: ["linux"]`，在 macOS / Windows 上 DSH 会跳过该组合包并给出原因，而不是崩溃。
 
 ## HTTP 接口
 
