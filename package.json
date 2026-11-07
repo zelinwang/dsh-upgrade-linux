@@ -1,0 +1,27 @@
+{
+  "name": "dsh-upgrade-linux",
+  "version": "0.1.0",
+  "description": "DSH 版本检测与一键升级（Linux 优先，零硬编码路径：npm / 全局前缀 / DSH_HOME / profile / systemd 单元全部运行时探测）",
+  "keywords": ["dsh", "deepseek-harness", "cordis", "dsh-plugin", "upgrade", "updater", "systemd", "linux"],
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": ["lib", "cordis.patch.yml", "README.md"],
+  "engines": {
+    "dsh": ">=0.2.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": ["@deepseek-ai/dsh-client-ui-slots"],
+      "platform": "web"
+    }
+  }
+}

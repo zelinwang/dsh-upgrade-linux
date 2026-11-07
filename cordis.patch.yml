@@ -1,0 +1,4 @@
+# dsh-upgrade-linux — DSH Web 升级插件（Linux / systemd 适配）
+- insert:
+    - id: upgrade-linux
+      name: dsh-upgrade-linux
