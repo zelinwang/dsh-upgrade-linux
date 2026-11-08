@@ -1,37 +1,62 @@
 {
   "format": 1,
-  "title": { "en": "zelinwang plugins", "zh": "zelinwang 插件" },
-  "description": { "en": "Plugins by zelinwang for DeepSeek Harness", "zh": "zelinwang 的 DSH 插件合集" },
+  "title": {
+    "en": "zelinwang plugins",
+    "zh": "zelinwang 插件"
+  },
+  "description": {
+    "en": "Plugins by zelinwang for DeepSeek Harness",
+    "zh": "zelinwang 的 DSH 插件合集"
+  },
   "metadata": {
-    "categories": { "updater": { "title": { "en": "Updater", "zh": "更新与升级" } } }
+    "categories": {
+      "updater": {
+        "title": {
+          "en": "Updater",
+          "zh": "更新与升级"
+        }
+      }
+    }
   },
   "plugins": [
     {
       "name": "dsh-upgrade-linux",
-      "title": { "en": "DSH Upgrade (Linux)", "zh": "DSH 一键升级（Linux）" },
+      "title": {
+        "en": "DSH Upgrade (Linux)",
+        "zh": "DSH 一键升级（Linux）"
+      },
       "description": {
         "en": "Version detection and one-click upgrade for DSH on Linux, with zero hard-coded paths.",
         "zh": "DSH 版本检测与一键升级，Linux 优先，零硬编码路径。"
       },
       "author": "zelinwang",
       "homepage": "https://github.com/zelinwang/dsh-upgrade-linux#readme",
-      "repository": { "url": "https://github.com/zelinwang/dsh-upgrade-linux" },
+      "repository": {
+        "url": "https://github.com/zelinwang/dsh-upgrade-linux"
+      },
       "metadata": {
         "category": "updater",
-        "keywords": ["dsh", "upgrade", "systemd", "linux"],
+        "keywords": [
+          "dsh",
+          "upgrade",
+          "systemd",
+          "linux"
+        ],
         "labels": [],
         "sortKeys": {}
       },
       "versions": [
         {
           "version": "0.1.0",
-          "publishTimestamp": 1794147222,
+          "publishTimestamp": 1794149968,
           "source": {
             "type": "git",
             "url": "https://github.com/zelinwang/dsh-upgrade-linux",
-            "commit": "22e1b77f6574b1ac186f3e8a2f1f49c270892247"
+            "commit": "e1c4862f128a630e506688afbbbe2cdaa7bfc8a3"
           },
-          "engines": { "dsh": ">=0.2.0" }
+          "engines": {
+            "dsh": ">=0.2.0"
+          }
         }
       ]
     }
