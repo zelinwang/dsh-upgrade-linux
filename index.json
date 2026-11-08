@@ -25,8 +25,12 @@
       "versions": [
         {
           "version": "0.1.0",
-          "publishTimestamp": 1794044314,
-          "source": { "type": "npm" },
+          "publishTimestamp": 1794147222,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/zelinwang/dsh-upgrade-linux",
+            "commit": "22e1b77f6574b1ac186f3e8a2f1f49c270892247"
+          },
           "engines": { "dsh": ">=0.2.0" }
         }
       ]
