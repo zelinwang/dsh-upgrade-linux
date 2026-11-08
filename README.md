@@ -97,6 +97,24 @@ systemctl --user restart dsh-web.service
 - `latest` 严格取自 dist-tag `latest`（参考插件会把任何非 alpha/beta 的最高版本提升为 latest，例如把 `0.2.2-rc.1` 当成稳定版）
 - 兼容性检查把"未声明引擎要求"的插件标记为 `null`（未知），而不是当作不兼容
 
+## 发布新版本
+
+市场索引里 pin 的是具体 commit，所以每次发版都要重新生成索引。用脚本一条命令完成：
+
+```bash
+npm run release -- 0.1.1              # 改版本号 → 提交 → 更新索引 → 校验 → 打 tag → 推送
+npm run release                       # 只把当前版本重新 pin 到最新 commit
+npm run release -- 0.1.1 --dry-run    # 只打印计划，不写任何文件
+npm run release -- 0.1.1 --no-push    # 提交到本地，不推送
+```
+
+脚本会检查工作区是否干净、核实 pin 的 commit 里 `package.json` 的版本号是否一致，并在本机装有 DSH 时用官方校验器验证索引。
+
+单独校验索引：
+
+```bash
+npm run validate
+```
 ## 注意
 
 - `dsh plugin add` 用 `link:` 安装本目录，改代码后**重启 DSH** 即生效
