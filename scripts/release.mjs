@@ -160,10 +160,9 @@ async function main() {
       git('commit', '-m', `market: pin v${version} to ${sha.slice(0, 7)}`)
       log('  索引已提交')
     } else log('  索引无变化')
-    try {
-      git('rev-parse', `refs/tags/v${version}`)
+    if (git('tag', '--list', `v${version}`)) {
       log(`  tag v${version} 已存在，跳过`)
-    } catch {
+    } else {
       git('tag', `v${version}`, sha)
       log(`  已打 tag v${version} → ${sha.slice(0, 7)}`)
     }
