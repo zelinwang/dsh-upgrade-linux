@@ -48,11 +48,11 @@
       "versions": [
         {
           "version": "0.1.0",
-          "publishTimestamp": 1794149968,
+          "publishTimestamp": 1794151363,
           "source": {
             "type": "git",
             "url": "https://github.com/zelinwang/dsh-upgrade-linux",
-            "commit": "e1c4862f128a630e506688afbbbe2cdaa7bfc8a3"
+            "commit": "75fd34b568526ad7cfb3e00f5537bdcc0aef9427"
           },
           "engines": {
             "dsh": ">=0.2.0"
